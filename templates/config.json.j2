@@ -32,6 +32,12 @@
 {% if consul_bootstrap_expect is defined %}
   "bootstrap_expect": {{ consul_bootstrap_expect }},
 {% endif %}
+{% if consul_reconnect_timeout is defined %}
+  "reconnect_timeout": "{{ consul_reconnect_timeout }}",
+{% endif %}
+{% if consul_reconnect_timeout_wan is defined %}
+  "reconnect_timeout_wan": "{{ consul_reconnect_timeout_wan }}",
+{% endif %}
   "performance": {
     "raft_multiplier": 3
   }

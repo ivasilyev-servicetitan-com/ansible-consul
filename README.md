@@ -19,6 +19,8 @@ The agent can act as a client or as a server if the host is placed in a group ca
 * `consul_node_meta`: This object allows associating arbitrary metadata key/value pairs with the local node, which can then be used for filtering results from certain catalog endpoints.
 * `consul_inventory_group_name`: set to the group name in the inventory file of the consul servers. Default is 'consul'.
 * `consul_install_dir`: Full path to where to install the consul command. Default is `/usr/local/bin`.
+* `consul_reconnect_timeout`: This controls how long it takes for a failed node to be completely removed from the cluster.
+* `consul_reconnect_timeout_wan`: This is the WAN equivalent of the `reconnect_timeout` parameter, which controls how long it takes for a failed server to be completely removed from the WAN pool.
 
 ## Bootstrapping
 
