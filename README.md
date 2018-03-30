@@ -21,6 +21,7 @@ The agent can act as a client or as a server if the host is placed in a group ca
 * `consul_install_dir`: Full path to where to install the consul command. Default is `/usr/local/bin`.
 * `consul_reconnect_timeout`: This controls how long it takes for a failed node to be completely removed from the cluster.
 * `consul_reconnect_timeout_wan`: This is the WAN equivalent of the `reconnect_timeout` parameter, which controls how long it takes for a failed server to be completely removed from the WAN pool.
+* `consul_enable_script_checks`: This controls whether health checks that execute scripts are enabled on this agent, and defaults to false so operators must opt-in to allowing these.
 
 ## Bootstrapping
 
