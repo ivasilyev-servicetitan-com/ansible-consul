@@ -27,6 +27,9 @@
 {% if consul_node_meta is defined %}
   "node_meta": {{ consul_node_meta | to_json }},
 {% endif %}
+{% if consul_enable_script_checks is defined and consul_enable_script_checks|bool %}
+  "enable_script_checks": true,
+{% endif %}
 {% if consul_inventory_group_name in group_names %}
   "server": true,
 {% if consul_bootstrap_expect is defined %}
