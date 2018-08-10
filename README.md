@@ -22,6 +22,7 @@ The agent can act as a client or as a server if the host is placed in a group ca
 * `consul_reconnect_timeout`: This controls how long it takes for a failed node to be completely removed from the cluster.
 * `consul_reconnect_timeout_wan`: This is the WAN equivalent of the `reconnect_timeout` parameter, which controls how long it takes for a failed server to be completely removed from the WAN pool.
 * `consul_enable_script_checks`: This controls whether health checks that execute scripts are enabled on this agent, and defaults to false so operators must opt-in to allowing these.
+* `consul_s3_source`: Path to a S3 object. If specified, the consul archive will be fetched from this S3 source instead of the hashicorp CDN.
 
 ## Bootstrapping
 
