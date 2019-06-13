@@ -4,6 +4,12 @@
 {% if consul_ui_enabled|default(false)|bool %}
   "ui": true,
 {% endif %}
+{% if consul_addresses is defined %}
+  "addresses": {{ consul_addresses|to_json }},
+{% endif %}
+{% if consul_ports is defined %}
+  "ports": {{ consul_ports|to_json }},
+{% endif %}
 {% if consul_advertise_address is defined %}
   "advertise_addr": "{{ consul_advertise_address }}",
 {% endif %}
