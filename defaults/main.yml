@@ -7,3 +7,4 @@ consul_template: config.json.j2
 consul_install_dir: /usr/local/bin
 consul_inventory_group_name: consul
 consul_bind_address: 0.0.0.0
+consul_do_not_start_immediately: true
