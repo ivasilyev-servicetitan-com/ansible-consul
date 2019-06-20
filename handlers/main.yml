@@ -6,4 +6,5 @@
   service:
     name: consul
     state: restarted
+  when: not consul_do_not_start_immediately
   tags: ['consul']
