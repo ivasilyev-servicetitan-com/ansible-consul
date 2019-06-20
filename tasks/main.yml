@@ -103,9 +103,16 @@
   notify: Reload systemd
   tags: ['consul', 'files']
 
-- name: "Ensure consul is started and enabled on boot"
+- name: "Ensure consul is enabled on boot"
+  service:
+    name: consul
+    enabled: yes
+  tags: ['consul']
+  
+- name: "Ensure consul is started"
   service:
     name: consul
     state: started
-    enabled: yes
+  when: not consul_do_not_start_immediately
   tags: ['consul']
+  
